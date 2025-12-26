@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} — {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1><a href="/">{{ site.title }}</a></h1>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/projects">Projects</a>
+          <a href="/about">About</a>
+          <a href="/resume">Resume</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      {{ content }}
+    </main>
+
+    <footer class="container">
+      <p>© {{ site.time | date: '%Y' }} {{ site.author.name }} — <a href="https://github.com/{{ site.github_username }}">GitHub</a></p>
+    </footer>
+  </body>
+</html>

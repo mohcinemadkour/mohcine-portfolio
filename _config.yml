@@ -1,0 +1,14 @@
+title: "Mohcine Madkour — Staff Data Scientist"
+description: "Portfolio of Mohcine Madkour, PhD — Staff Data Scientist"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mohcinemadkour.github.io"
+github_username: "mohcinemadkour"
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Author
+author:
+  name: "Mohcine Madkour"
+  email: "mohcine.madkour@gmail.com"
