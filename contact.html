@@ -1,15 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact — Mohcine Madkour — Staff Data Scientist</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+<!-- Inline script to set initial theme quickly to avoid flash -->
+<script>
+  (function(){
+    try{
+      const html = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      if(stored === 'dark' || (!stored && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+      } else {
+        html.classList.add('light');
+      }
+    }catch(e){/* ignore */}
+  })();
+</script>
+    <title>Contact — Mohcine Madkour</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
     <header>
-      <div class="container">
-        <h1><a href="/">Mohcine Madkour — Staff Data Scientist</a></h1>
+      <div class="container header-inner">
+        <h1 class="brand"><a href="/">Mohcine Madkour</a></h1>
         <nav>
           <a href="/">Home</a>
           <a href="/projects">Projects</a>
@@ -17,6 +35,9 @@
           <a href="/resume">Resume</a>
           <a href="/contact">Contact</a>
         </nav>
+        <div class="theme-toggle">
+          <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+        </div>
       </div>
     </header>
 
@@ -32,5 +53,17 @@
     <footer class="container">
       <p>© 2025 Mohcine Madkour — <a href="https://github.com/mohcinemadkour">GitHub</a></p>
     </footer>
+
+    <script>
+      (function(){
+        const btn = document.getElementById('theme-toggle');
+        if(!btn) return;
+        btn.addEventListener('click', function(){
+          const html = document.documentElement;
+          if(html.classList.contains('dark')){ html.classList.remove('dark'); html.classList.add('light'); localStorage.setItem('theme','light'); }
+          else { html.classList.remove('light'); html.classList.add('dark'); localStorage.setItem('theme','dark'); }
+        });
+      })();
+    </script>
   </body>
 </html>
