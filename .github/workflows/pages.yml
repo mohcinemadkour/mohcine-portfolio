@@ -1,5 +1,11 @@
 name: Build and Deploy Jekyll site
 
+# Give the workflow explicit write permissions so the Pages deploy step can push
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 on:
   push:
     branches: [ main ]
